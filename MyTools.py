@@ -7,11 +7,17 @@ import os
 
 class MyTools:
     def genrate_sample():
+        """
+        创建训练用的样本，获取windows/Fonts文件夹下所有.ttf文件，每个字体将数字打印在50×50的图片中心
+        之后裁剪，resize为20×30的样本，文件命名{数字}_{字体}_{40}.png（40字号）
+
+        ！！！！系统字体可能有一些不包含数字，输出的图片无数字，需提前排除或输出后人工删除
+        """
         # 图像尺寸
         width, height = 50, 50
 
         # 字体列表
-        fonts_dict = {"Arial": "C:\\Windows\\Fonts\\arial.ttf", "Calibri": "C:\\Windows\\Fonts\\calibri.ttf", "Consola": "C:\\Windows\\Fonts\\consola.ttf", "Candara": "C:\\Windows\\Fonts\\candara.ttf", "Verdana": "C:\\Windows\\Fonts\\verdana.ttf"}
+        #fonts_dict = {"Arial": "C:\\Windows\\Fonts\\arial.ttf", "Calibri": "C:\\Windows\\Fonts\\calibri.ttf", "Consola": "C:\\Windows\\Fonts\\consola.ttf", "Candara": "C:\\Windows\\Fonts\\candara.ttf", "Verdana": "C:\\Windows\\Fonts\\verdana.ttf"}
 
         font_size = 40
         center = (25, 25)
